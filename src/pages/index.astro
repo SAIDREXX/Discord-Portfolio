@@ -1,123 +1,89 @@
 ---
+import Server from '../components/Server.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
----
 
+---
 <Layout title="Welcome to Astro.">
 	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
-			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-				d="M167.19 364.254C83.4786 364.254 0 404.819 0 404.819C0 404.819 141.781 19.4876 142.087 18.7291C146.434 7.33701 153.027 0 162.289 0H332.441C341.703 0 348.574 7.33701 352.643 18.7291C352.92 19.5022 494.716 404.819 494.716 404.819C494.716 404.819 426.67 364.254 327.525 364.254L264.41 169.408C262.047 159.985 255.147 153.581 247.358 153.581C239.569 153.581 232.669 159.985 230.306 169.408L167.19 364.254ZM160.869 530.172C160.877 530.18 160.885 530.187 160.894 530.195L160.867 530.181C160.868 530.178 160.868 530.175 160.869 530.172ZM136.218 411.348C124.476 450.467 132.698 504.458 160.869 530.172C160.997 529.696 161.125 529.242 161.248 528.804C161.502 527.907 161.737 527.073 161.917 526.233C165.446 509.895 178.754 499.52 195.577 500.01C211.969 500.487 220.67 508.765 223.202 527.254C224.141 534.12 224.23 541.131 224.319 548.105C224.328 548.834 224.337 549.563 224.347 550.291C224.563 566.098 228.657 580.707 237.264 593.914C245.413 606.426 256.108 615.943 270.749 622.478C270.593 621.952 270.463 621.508 270.35 621.126C270.045 620.086 269.872 619.499 269.685 618.911C258.909 585.935 266.668 563.266 295.344 543.933C298.254 541.971 301.187 540.041 304.12 538.112C310.591 533.854 317.059 529.599 323.279 525.007C345.88 508.329 360.09 486.327 363.431 457.844C364.805 446.148 363.781 434.657 359.848 423.275C358.176 424.287 356.587 425.295 355.042 426.275C351.744 428.366 348.647 430.33 345.382 431.934C303.466 452.507 259.152 455.053 214.03 448.245C184.802 443.834 156.584 436.019 136.218 411.348Z"
-				fill="url(#paint0_linear_1805_24383)"></path>
-			<defs>
-				<linearGradient
-					id="paint0_linear_1805_24383"
-					x1="247.358"
-					y1="0"
-					x2="247.358"
-					y2="622.479"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<header class="h-5 flex items-center fixed top-0 w-full justify-between bg-topColor">
+			<div>
+				<svg class="w-12 ml-2" viewBox="0 0 92.684 14.38" xmlns="http://www.w3.org/2000/svg"><g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000" stroke-width="0.25mm" fill="#ffffff" style="stroke:#63636300;stroke-width:0.25mm;fill:#8f959e"><path d="M 72.54 4.18 L 74.12 0.72 Q 74.36 0.12 76.62 0.12 A 9.602 9.602 0 0 1 77.092 0.133 Q 77.305 0.143 77.545 0.163 A 20.449 20.449 0 0 1 78.05 0.21 Q 78.883 0.298 78.9 0.377 A 0.015 0.015 0 0 1 78.9 0.38 L 75.5 7.3 L 79.02 13.92 A 0.024 0.024 0 0 1 79.024 13.932 Q 79.024 14.025 78.169 14.109 A 17.902 17.902 0 0 1 78.16 14.11 A 22.889 22.889 0 0 1 77.509 14.165 Q 77.255 14.182 77.027 14.191 A 11.096 11.096 0 0 1 76.6 14.2 A 14.573 14.573 0 0 1 75.737 14.177 Q 74.512 14.104 74.06 13.802 A 0.578 0.578 0 0 1 73.82 13.52 L 72.32 9.7 L 70.96 13.64 A 0.489 0.489 0 0 1 70.719 13.888 Q 70.295 14.125 69.179 14.182 A 15.359 15.359 0 0 1 68.4 14.2 A 10.842 10.842 0 0 1 67.936 14.189 Q 67.504 14.171 66.96 14.12 A 7.98 7.98 0 0 1 66.733 14.096 Q 66.115 14.021 66.179 13.902 A 0.065 0.065 0 0 1 66.18 13.9 L 69.3 6.98 L 66.06 0.38 A 0.024 0.024 0 0 1 66.056 0.367 Q 66.056 0.274 66.89 0.19 Q 67.563 0.122 68.081 0.105 A 9.977 9.977 0 0 1 68.4 0.1 A 13.515 13.515 0 0 1 69.265 0.125 Q 70.491 0.204 70.935 0.531 A 0.598 0.598 0 0 1 71.16 0.82 L 72.54 4.18 Z M 86.2 4.18 L 87.78 0.72 Q 88.02 0.12 90.28 0.12 A 9.602 9.602 0 0 1 90.752 0.133 Q 90.965 0.143 91.205 0.163 A 20.449 20.449 0 0 1 91.71 0.21 Q 92.543 0.298 92.56 0.377 A 0.015 0.015 0 0 1 92.56 0.38 L 89.16 7.3 L 92.68 13.92 A 0.024 0.024 0 0 1 92.684 13.932 Q 92.684 14.025 91.829 14.109 A 17.902 17.902 0 0 1 91.82 14.11 A 22.889 22.889 0 0 1 91.169 14.165 Q 90.915 14.182 90.687 14.191 A 11.096 11.096 0 0 1 90.26 14.2 A 14.573 14.573 0 0 1 89.397 14.177 Q 88.172 14.104 87.72 13.802 A 0.578 0.578 0 0 1 87.48 13.52 L 85.98 9.7 L 84.62 13.64 A 0.489 0.489 0 0 1 84.379 13.888 Q 83.955 14.125 82.839 14.182 A 15.359 15.359 0 0 1 82.06 14.2 A 10.842 10.842 0 0 1 81.596 14.189 Q 81.164 14.171 80.62 14.12 A 7.98 7.98 0 0 1 80.393 14.096 Q 79.775 14.021 79.839 13.902 A 0.065 0.065 0 0 1 79.84 13.9 L 82.96 6.98 L 79.72 0.38 A 0.024 0.024 0 0 1 79.716 0.367 Q 79.716 0.274 80.55 0.19 Q 81.223 0.122 81.741 0.105 A 9.977 9.977 0 0 1 82.06 0.1 A 13.515 13.515 0 0 1 82.925 0.125 Q 84.151 0.204 84.595 0.531 A 0.598 0.598 0 0 1 84.82 0.82 L 86.2 4.18 Z M 60.76 5.74 L 63.34 5.74 A 0.229 0.229 0 0 1 63.534 5.867 Q 63.675 6.09 63.709 6.708 A 7.914 7.914 0 0 1 63.72 7.14 A 4.844 4.844 0 0 1 63.705 7.506 Q 63.684 7.792 63.63 8.13 Q 63.54 8.7 63.3 8.7 L 60.76 8.7 L 60.76 10.7 L 64.44 10.7 A 0.275 0.275 0 0 1 64.656 10.814 Q 64.823 11.016 64.9 11.58 A 4.931 4.931 0 0 1 64.954 12.126 A 5.838 5.838 0 0 1 64.96 12.39 A 4.004 4.004 0 0 1 64.948 12.683 Q 64.923 13.021 64.845 13.47 A 12.638 12.638 0 0 1 64.84 13.5 Q 64.737 14.086 64.515 14.167 A 0.215 0.215 0 0 1 64.44 14.18 L 57.6 14.18 Q 56.84 14.18 56.84 13.56 L 56.84 0.7 A 0.856 0.856 0 0 1 56.861 0.504 Q 56.923 0.239 57.177 0.191 A 0.659 0.659 0 0 1 57.3 0.18 L 64.46 0.18 Q 64.88 0.18 64.88 1.95 A 11.676 11.676 0 0 1 64.87 2.46 Q 64.814 3.72 64.46 3.72 L 60.76 3.72 L 60.76 5.74 Z M 0.94 9.3 Q 1.32 9.6 2.25 10.12 Q 3.12 10.606 3.919 10.638 A 2.806 2.806 0 0 0 4.03 10.64 A 1.606 1.606 0 0 0 4.34 10.613 Q 4.833 10.515 4.876 10.069 A 0.924 0.924 0 0 0 4.88 9.98 A 0.694 0.694 0 0 0 4.7 9.512 A 0.949 0.949 0 0 0 4.64 9.45 A 1.461 1.461 0 0 0 4.476 9.317 Q 4.292 9.186 3.997 9.036 A 7.928 7.928 0 0 0 3.76 8.92 Q 3.12 8.62 2.8 8.45 A 3.864 3.864 0 0 1 2.586 8.326 Q 2.371 8.193 2.09 7.992 A 14.939 14.939 0 0 1 1.95 7.89 A 4.239 4.239 0 0 1 1.561 7.568 Q 1.37 7.389 1.229 7.204 A 2.388 2.388 0 0 1 1.14 7.08 A 4.24 4.24 0 0 1 0.488 5.578 Q 0.354 4.996 0.341 4.321 A 7.582 7.582 0 0 1 0.34 4.18 A 3.868 3.868 0 0 1 1.53 1.325 A 4.808 4.808 0 0 1 1.65 1.21 A 4.465 4.465 0 0 1 3.893 0.107 A 6.321 6.321 0 0 1 5.08 0 A 11.726 11.726 0 0 1 6.713 0.109 A 9.592 9.592 0 0 1 7.74 0.31 A 5.173 5.173 0 0 1 8.156 0.433 Q 8.968 0.714 9 1.12 L 9 1.24 Q 9 1.925 8.578 2.966 A 9.889 9.889 0 0 1 8.56 3.01 Q 8.136 4.041 7.954 4.19 A 0.175 0.175 0 0 1 7.94 4.2 Q 6.66 3.54 5.65 3.54 Q 4.663 3.54 4.641 4.228 A 0.992 0.992 0 0 0 4.64 4.26 A 0.564 0.564 0 0 0 4.772 4.614 Q 4.921 4.803 5.237 4.97 A 2.943 2.943 0 0 0 5.38 5.04 A 9.67 9.67 0 0 0 5.469 5.084 Q 5.569 5.133 5.707 5.198 A 38.393 38.393 0 0 0 5.84 5.26 A 36.784 36.784 0 0 1 6.12 5.392 Q 6.263 5.46 6.422 5.538 A 64.626 64.626 0 0 1 6.53 5.59 A 6.983 6.983 0 0 1 6.935 5.805 A 9.572 9.572 0 0 1 7.37 6.07 Q 7.82 6.36 8.34 6.84 A 3.33 3.33 0 0 1 9.372 8.959 A 4.626 4.626 0 0 1 9.4 9.48 A 6.363 6.363 0 0 1 9.22 11.033 A 4.653 4.653 0 0 1 8.22 12.98 Q 7.04 14.34 4.58 14.38 Q 3.38 14.38 2.41 14.18 Q 1.44 13.98 0.72 13.4 A 2.144 2.144 0 0 1 0.288 12.942 A 1.634 1.634 0 0 1 0 12 Q 0 11.18 0.3 10.371 Q 0.535 9.734 0.795 9.438 A 1.008 1.008 0 0 1 0.94 9.3 Z M 48.86 9.36 L 48.86 13.9 A 0.162 0.162 0 0 1 48.756 14.032 Q 48.415 14.22 46.96 14.22 A 19.225 19.225 0 0 1 46.407 14.213 Q 45.314 14.181 45.095 14.013 A 0.118 0.118 0 0 1 45.04 13.92 L 45.04 0.88 Q 45.04 0.18 45.78 0.18 L 49.6 0.18 Q 54.471 0.18 54.831 3.696 A 5.731 5.731 0 0 1 54.86 4.28 A 5.546 5.546 0 0 1 54.691 5.671 A 4.78 4.78 0 0 1 54.38 6.53 Q 53.9 7.54 53.02 8.14 L 55.54 12.34 A 1.133 1.133 0 0 1 55.382 12.637 Q 55.191 12.904 54.812 13.207 A 6.419 6.419 0 0 1 54.5 13.44 A 7.589 7.589 0 0 1 53.892 13.836 Q 53.093 14.3 52.52 14.3 A 1.717 1.717 0 0 1 52.051 14.24 A 1.21 1.21 0 0 1 51.36 13.74 L 49.48 9.36 L 48.86 9.36 Z M 18.56 13.66 L 17.9 11.08 L 14.72 11.08 L 14.14 13.56 A 0.518 0.518 0 0 1 13.88 13.9 Q 13.499 14.137 12.574 14.173 A 9.01 9.01 0 0 1 12.22 14.18 Q 11.459 14.18 11.013 14.111 A 2.678 2.678 0 0 1 10.8 14.07 A 6.043 6.043 0 0 1 10.668 14.037 Q 10.34 13.951 10.34 13.9 L 13.88 0.36 A 0.054 0.054 0 0 1 13.923 0.323 Q 14.178 0.218 15.953 0.203 A 76.59 76.59 0 0 1 16.62 0.2 Q 19.36 0.2 19.36 0.36 L 22.82 13.92 Q 22.82 14.06 21.9 14.14 Q 21.142 14.206 20.642 14.218 A 8.723 8.723 0 0 1 20.44 14.22 Q 18.7 14.22 18.56 13.66 Z M 24.08 10.74 L 25.46 10.74 L 25.46 3.62 L 24.04 3.62 A 0.284 0.284 0 0 1 23.822 3.509 Q 23.666 3.33 23.578 2.861 A 4.15 4.15 0 0 1 23.56 2.76 Q 23.5 2.34 23.5 1.9 Q 23.5 1.46 23.56 1.04 Q 23.7 0.18 24.04 0.18 L 30.76 0.18 A 0.279 0.279 0 0 1 30.98 0.296 Q 31.144 0.496 31.22 1.04 Q 31.3 1.46 31.3 1.9 Q 31.3 2.34 31.22 2.76 A 3.402 3.402 0 0 1 31.168 3.05 Q 31.063 3.508 30.864 3.598 A 0.248 0.248 0 0 1 30.76 3.62 L 29.42 3.62 L 29.42 10.74 L 30.82 10.74 A 0.284 0.284 0 0 1 31.039 10.851 Q 31.194 11.03 31.282 11.499 A 4.15 4.15 0 0 1 31.3 11.6 Q 31.38 12.02 31.38 12.46 Q 31.38 12.9 31.3 13.32 Q 31.16 14.18 30.82 14.18 L 24.08 14.18 A 0.279 0.279 0 0 1 23.86 14.064 Q 23.696 13.864 23.62 13.32 Q 23.54 12.9 23.54 12.46 Q 23.54 12.02 23.62 11.6 A 3.402 3.402 0 0 1 23.672 11.311 Q 23.777 10.853 23.977 10.762 A 0.248 0.248 0 0 1 24.08 10.74 Z M 32.72 13.26 L 32.72 1.26 Q 32.72 0.863 32.878 0.598 A 0.907 0.907 0 0 1 32.97 0.47 A 0.808 0.808 0 0 1 33.558 0.182 A 1.057 1.057 0 0 1 33.62 0.18 L 36.96 0.18 Q 39.175 0.18 40.648 0.956 A 4.936 4.936 0 0 1 41.79 1.78 Q 43.077 3.028 43.36 5.395 A 12.014 12.014 0 0 1 43.44 6.82 Q 43.44 13.245 38.655 14.061 A 8.893 8.893 0 0 1 37.16 14.18 L 33.74 14.18 Q 32.72 14.18 32.72 13.26 Z M 36.76 3.98 L 36.56 3.98 L 36.56 9.96 A 4.737 4.737 0 0 0 36.562 10.107 Q 36.571 10.401 36.62 10.49 A 0.152 0.152 0 0 0 36.683 10.549 Q 36.772 10.598 36.963 10.6 A 1.583 1.583 0 0 0 36.98 10.6 A 2.339 2.339 0 0 0 37.695 10.496 A 1.811 1.811 0 0 0 38.65 9.78 Q 39.14 9.075 39.209 7.565 A 11.328 11.328 0 0 0 39.22 7.05 A 9.758 9.758 0 0 0 39.192 6.278 Q 39.092 5.028 38.641 4.571 A 1.014 1.014 0 0 0 38.63 4.56 A 1.779 1.779 0 0 0 37.989 4.166 Q 37.485 3.98 36.76 3.98 Z M 16.3 4.4 L 15.22 8.54 L 17.32 8.54 L 16.42 4.4 L 16.3 4.4 Z M 49.28 3.72 L 48.86 3.72 L 48.86 6.72 L 48.96 6.72 A 3.338 3.338 0 0 0 49.665 6.652 Q 50.69 6.43 50.836 5.477 A 2.226 2.226 0 0 0 50.86 5.14 A 2.232 2.232 0 0 0 50.827 4.745 Q 50.788 4.525 50.7 4.353 A 1.031 1.031 0 0 0 50.49 4.07 A 1.085 1.085 0 0 0 50.129 3.85 Q 49.813 3.728 49.343 3.721 A 3.905 3.905 0 0 0 49.28 3.72 Z" vector-effect="non-scaling-stroke"/></g>
+				</svg>
+			</div>
+			<nav class="flex justify-center items-center">
+				<div>
+					<svg class="w-9 h-6" fill="#8f959e" viewBox="-3.2 -3.2 38.40 38.40" version="1.1" xmlns="http://www.w3.org/2000/svg" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #000000;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>underscore</title> <path d="M1.406 28.188h16.375v1.875h-16.375v-1.875z"></path> </g></svg>
+				</div>
+				<div>
+					<svg class="w-8 h-6 scale-50" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="4" y="4" width="16" height="16" rx="2" stroke="#8f959e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #a69e93;"></rect> </g></svg>
+				</div>
+				<div>
+					<svg class="w-8 h-6 scale-50" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#8f959e" style="--darkreader-inline-fill: #535a5d;" data-darkreader-inline-fill=""></path></g></svg>
+				</div>
+			</nav>
+		</header>
+
+		<section class="pt-5 bg-topColor w-screen max-h-screen overflow-auto grid grid-cols-22">
+			<!-- Servers -->
+			<div class="col-span-1 flex flex-col items-center gap-2 bg-topColor">
+				<div class="rounded-full bg-chatColor overflow-hidden w-11 h-11 transition-transform ease-in-out duration-300 hover:rounded-xl hover:bg-hoverColor">
+					<svg class="w-11 p-2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#fff" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #fff;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#fff" d="M139.5 38.28c-40.73.57-73.1 25.79-105.61 38.33-10.02 24.79-8.26 51.99 9.02 68.09 11.76-10.8 76.19-44.94 95.09-44.6 27 14.8 17.5 76.1 3.7 94.8-6.1 8.1-32.4 7.1-40.7-1.1 6.6-16 13.3-31.9 32.5-45.4-7.4-27-60.6 2.6-83.47 8.9l-1.4 53.1c-70.79 19.7-3.9 91.9 22.05 112.8-.99 33.2 8.19 61.7 69.32 70 66.7 28.1 115.6 71.6 189.6 80.5 50.7 1.2 59.2-18.5 52.8-55.6 11.5-20.2 19.1-41.1 16.1-63.9-10 18.7-29.5 36.5-48.2 48.5-3.4-1.1-6.7-2.4-10-3.7 9.9-17.8 18.1-36.1 18-56.6-13.6 17.5-27.8 33.7-45.3 44.8-8.2-4.1-16-8.5-23.4-13.2 14.1-13.4 19.3-30.3 25.4-46.7-14 12.4-33.4 19.7-54 25.8-4.6-4-9.2-8.2-13.7-12.6l13.1-31.1-24 19.7c-5.8-6.4-11.5-13.3-17.1-20.6l9.5-25.3-18.2 13.7c-10-17.3-24.4-30-29.2-34.1 3.6-21.7 33.5-46.6 33.5-46.6 16.8-3.3 28.4 2.8 42.2 7.8l-4.6 23.2 22.8-16.4c2.9 1 5.9 2.1 8.9 3.3l-5.4 27.5 24.9-20.3c9.2 3.4 18.5 6.7 27.7 9.8-4.6 13.9-14.2 26.7-23 39.6 18.6-8.8 38.5-16.2 51.2-31 9.1 2.5 18.2 4.7 27.2 6.4-3.8 17.8-11 34.5-20.8 50.4 23-12.8 41.2-27.5 48.4-46.6 6.4.5 12.7.7 18.9.6 3.3 21-1 42-7 63 19.6-20.5 40-40.8 43.8-67.6 3.4-.8 6.8-1.7 10.2-2.9 2.3-23.3-.6-20.9 14.6-36 .8-41.2-30.6-68.6-78-89.2l-125.3-28.2c-18-17.67-29.4-38.97-84.4-47.33-20.2-13.45-46.1-24.31-67.7-23.99zm73.1 64.12c9.5 22.5-10.4 71-11.5 72.3-21.2-3.2-3-58.3-19.8-72.3 5.5-13.83 28.4-9.68 31.3 0zm31.6 14.2c41.9 7.9 77.7 32.5 81.4 52.4 2.2 11.6 1.5 20.8-6.3 25.8-3.7-8-10.7-11.9-22.3-10.3-6.7-23.4-46.5-7.6-60.6-3.6-4.1-26.5 1-39 7.8-64.3zM361 161.2c6.5-.3 12.3 2.9 13.6 10.3.8 24.9-33.1 32.6-31.9 6.3 1.1-10.3 10.2-16.3 18.3-16.6zm53.2 1.2s38 5.8 51.1 18.3c8.4 7.9 13.4 31.9 13.4 31.9-2.9-10.7-60.1-48.9-64.5-50.2zm-283.7 52.5c18.9-.2 37.6.9 54.2 3.2L154 248.8c-26.9-2.1-60.19-18.4-79.63-30 17.91-2.5 37.23-3.8 56.13-3.9zm-36.28 43.9c8.28-.3 17.08 18.3 8.18 24.3-6.14 3.4-16.46-6.3-16.46-13.3 1.96-7.9 5.11-10.9 8.28-11z" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #000000;"></path></g>
+					</svg>
+				</div>
+				<hr class="w-6 border-chatColor">
+				<!---- Add Cards to show more proyects-->
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				<Server href='../../public/images/splash.webp'></Server>
+				
+			</div>
+
+			<!-- Channels -->
+			<div class="col-span-4 bg-channelColor rounded-s-xl z-0">
+				<div class="flex justify-center items-center col-span-4 h-10 bg-channelColor rounded-tl-lg z-10 shadow-sm">
+					<button class="w-full m-2 h-6 pl-1 rounded-sm bg-searchColor text-[13px] text-left text-textColor font-Noto cursor-pointer focus:border-none">Buscar o iniciar una conversación</button>
+				</div>
+			</div>
+			<!-- Messages -->
+			<div class="col-span-13 bg-chatColor z-0">
+				<div class="flex items-center col-span-4 h-10 bg-chatColor z-10 shadow-md">
+					<ul class="flex gap-1 pl-4 pr-4">
+						<li><a href="#"><svg x="0" y="0" class="icon__4cb88" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#80848e" d="M13 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" class=""></path><path fill="#80848e" d="M3 5v-.75C3 3.56 3.56 3 4.25 3s1.24.56 1.33 1.25C6.12 8.65 9.46 12 13 12h1a8 8 0 0 1 8 8 2 2 0 0 1-2 2 .21.21 0 0 1-.2-.15 7.65 7.65 0 0 0-1.32-2.3c-.15-.2-.42-.06-.39.17l.25 2c.02.15-.1.28-.25.28H9a2 2 0 0 1-2-2v-2.22c0-1.57-.67-3.05-1.53-4.37A15.85 15.85 0 0 1 3 5Z" class=""></path></svg></a></li>
+						<li><a class="font-semibold text-white" href="#">Amigos</a></li>
+						
+					</ul>
+					<div class="flex items-center border-l-[1px] h-5">
+						
+					</div>
+					<ul class="flex [&>li>a]:inline-block [&>li>a]:px-3 [&>li>a]:py-1 [&>li]:text-textColor [&>li]:font-regular">
+						<li><a href="#">En línea</a></li>
+						<li><a href="#">Todos</a></li>
+						<li><a href="#">Pendiente</a></li>
+						<li><a href="#">Sugerencias</a></li>
+						<li><a href="#">Bloqueados</a></li>
+						<li><a href="#">Añadir amigos</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Members -->
+			<div class="col-span-4 bg-channelColor z-0">
+				<div class="col-span-4 h-10 bg-chatColor z-10 shadow-md">
+					Hola
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
